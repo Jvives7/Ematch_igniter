@@ -242,7 +242,7 @@ Continuity Test Specs:\n- 40mA(max), 0mA(min)current through ematch.\n- Test mus
 Text Notes 5050 4500 0    50   ~ 0
 Fire EMATCH Specs:\n- 2A(max), 750mA(min)current through ematch\n- Test must be enabled by GPIO pin\n\nI = V/R\nI = 1.09A = 12V / 11ohms
 Wire Wire Line
-	8250 3950 8250 5200
+	8250 3950 8250 4350
 Wire Wire Line
 	8250 2350 8250 3050
 Connection ~ 7900 2350
@@ -372,4 +372,19 @@ F 3 "" H 4900 5100 50  0001 C CNN
 	1    4900 5100
 	1    0    0    -1  
 $EndComp
+$Comp
+L Simulation_SPICE:DIODE D?
+U 1 1 60F672A5
+P 8250 4500
+F 0 "D?" V 8296 4420 50  0000 R CNN
+F 1 "DIODE" V 8205 4420 50  0000 R CNN
+F 2 "" H 8250 4500 50  0001 C CNN
+F 3 "~" H 8250 4500 50  0001 C CNN
+F 4 "Y" H 8250 4500 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 8250 4500 50  0001 L CNN "Spice_Primitive"
+	1    8250 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8250 4650 8250 5200
 $EndSCHEMATC
