@@ -1,0 +1,14 @@
+Test Documentation Ematch Circuit
+
+TP3 - Check that Current is 30mA
+
+TP5- Check that no current is flowing when Fire is enabled 
+
+
+
+
+
+
+Order Notes: 
+
+Order a 1 ohm load resistor to simulate e match
