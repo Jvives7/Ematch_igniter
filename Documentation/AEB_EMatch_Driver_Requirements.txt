@@ -1,0 +1,19 @@
+Requirement.
+	Rationale.
+
+Supply voltage shall be between 10 volts and 13 volts (12.6 volts nominal).
+	This is the voltage nominal voltage range for a 3S lipo.
+No more than 2 Amps shall be drawn per ematch.
+	The cutoff is kinda arbitrary but we can't draw too much current through the wires.
+The ematch will act as a resistor with a resistance between 0.8 and 1.2 ohms.
+	See ematch "datasheet".
+The ematch must be allowed to pull at least 750mA when firing.
+	See ematch "datasheet".
+There must be capability to run a "continuity check" to ensure the ematch is installed correctly (no open circuits).
+	This can be done by allowing a small amount of current to flow the ematch and measureing a non-zero current draw.
+During a continuity check the ematch must not be allowed to draw more than 40mA.
+	See ematch "datasheet".
+Firing an ematch and running a continuity check must be controllable via a 3.3 volt GPIO signal.
+	Logic high means fire/check continuity.
+The circuit must default to a safe state (ie no fire and no continuity check) when the fire and continuity check GPIO signals are floating.
+	Before the microcontroller boots up it's GPIO signals are tri-state so those wires are floating, if they float high enough they could potentally ignite the ematch at startup.
